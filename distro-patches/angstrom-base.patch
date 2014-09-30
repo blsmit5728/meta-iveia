@@ -1,0 +1,53 @@
+diff --git a/CSL_lpe_kernel.patch b/CSL_lpe_kernel.patch
+new file mode 100644
+index 0000000..477d863
+--- /dev/null
++++ b/CSL_lpe_kernel.patch
+@@ -0,0 +1,26 @@
++diff --git a/conf/bblayers.conf b/conf/bblayers.conf
++index 81ee1a1..ac174bc 100644
++--- a/conf/bblayers.conf
+++++ b/conf/bblayers.conf
++@@ -69,6 +69,7 @@ EXTRALAYERS ?= " \
++   ${TOPDIR}/sources/meta-linaro/meta-linaro \
++   ${TOPDIR}/sources/meta-linaro/meta-linaro-toolchain \
++   ${TOPDIR}/sources/meta-linaro/meta-aarch64 \
+++  ${TOPDIR}/sources/meta-sourcery \
++ "
++ 
++ BBLAYERS = " \
++diff --git a/conf/local.conf b/conf/local.conf
++index d8ff21d..f8d5cf2 100644
++--- a/conf/local.conf
+++++ b/conf/local.conf
++@@ -34,6 +34,9 @@ BB_GENERATE_MIRROR_TARBALLS = "0"
++ # and wait for manual intervention. We disable it.
++ PATCHRESOLVE = "noop"
++ 
+++# Needed for building the Atlas-I-LPe linux kernel
+++EXTERNAL_TOOLCHAIN = "/opt/CodeSourcery/Sourcery_G++_Lite/"
+++
++ #
++ # Shared-state files from other locations
++ #
+diff --git a/conf/bblayers.conf b/conf/bblayers.conf
+index ea8a6bc..81ee1a1 100644
+--- a/conf/bblayers.conf
++++ b/conf/bblayers.conf
+@@ -60,6 +60,7 @@ BSPLAYERS ?= " \
+   ${TOPDIR}/sources/meta-atmel \
+   ${TOPDIR}/sources/meta-exynos \
+   ${TOPDIR}/sources/meta-gumstix-community \
++  ${TOPDIR}/sources/meta-iveia \
+ "
+ 
+ # Add your overlay location to EXTRALAYERS
+diff --git a/sources/layers.txt b/sources/layers.txt
+index 48b82b3..b457d50 100644
+--- a/sources/layers.txt
++++ b/sources/layers.txt
+@@ -30,3 +30,4 @@ meta-qt5,git://github.com/meta-qt5/meta-qt5,master,1fa7f364f682e5cfaa9d6e565b7ae
+ meta-uav,git://github.com/koenkooi/meta-uav.git,master,74c23fabc18da7e8d161d196aa4f0e9a13486010
+ meta-telephony,http://git.gitorious.org/sysmocom-openembedded/meta-telephony.git,master,f71f5ea031d96a5a84bde4531974542ae49f8bee
+ openembedded-core,git://github.com/openembedded/oe-core.git,daisy,HEAD
++meta-sourcery,https://github.com/MentorEmbedded/meta-sourcery.git,daisy,HEAD

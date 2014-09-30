@@ -1,0 +1,29 @@
+diff --git a/conf/distro/include/arm-defaults.inc b/conf/distro/include/arm-defaults.inc
+index 906fcb8..86c939a 100644
+--- a/conf/distro/include/arm-defaults.inc
++++ b/conf/distro/include/arm-defaults.inc
+@@ -10,7 +10,7 @@
+ def arm_tune_handler(d):
+     features = d.getVar('TUNE_FEATURES', True).split()
+     if 'armv7a' in features:
+-        tune = 'armv7athf'
++        tune = 'armv7at'
+         if 'bigendian' in features:
+             tune += 'b'
+         if 'neon' in features:
+diff --git a/recipes-images/angstrom/iveia-image.bb b/recipes-images/angstrom/iveia-image.bb
+new file mode 100644
+index 0000000..d0007c2
+--- /dev/null
++++ b/recipes-images/angstrom/iveia-image.bb
+@@ -0,0 +1,10 @@
++#Angstrom bootstrap image
++require console-base-image.bb
++
++DEPENDS += "packagegroup-base-extended \
++	   "
++
++IMAGE_INSTALL += "packagegroup-base-extended \
++	    "
++
++export IMAGE_BASENAME = "iveia-image"
