@@ -62,3 +62,16 @@ index f2ac987..c9fef78 100644
 +esac
 +
 +exit 0
+diff --git a/meta/recipes-core/systemd/systemd-serialgetty/serial-getty@.service b/meta/recipes-core/systemd/systemd-serialgetty/serial-getty@.service
+index 6dd335c..c042cb9 100644
+--- a/meta/recipes-core/systemd/systemd-serialgetty/serial-getty@.service
++++ b/meta/recipes-core/systemd/systemd-serialgetty/serial-getty@.service
+@@ -21,7 +21,7 @@ IgnoreOnIsolate=yes
+ 
+ [Service]
+ Environment="TERM=xterm"
+-ExecStart=-/sbin/agetty -8 --keep-baud %I @BAUDRATE@ $TERM
++ExecStart=-/sbin/agetty -8 --keep-baud -a root %I @BAUDRATE@ $TERM
+ Type=idle
+ Restart=always
+ RestartSec=0
