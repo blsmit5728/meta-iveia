@@ -31,9 +31,18 @@ index 0000000..477d863
 + # Shared-state files from other locations
 + #
 diff --git a/conf/bblayers.conf b/conf/bblayers.conf
-index ea8a6bc..81ee1a1 100644
+index ea8a6bc..45e5f6d 100644
 --- a/conf/bblayers.conf
 +++ b/conf/bblayers.conf
+@@ -31,7 +31,7 @@ BASELAYERS ?= " \
+   ${TOPDIR}/sources/meta-openembedded/meta-systemd \
+   ${TOPDIR}/sources/meta-ros \
+   ${TOPDIR}/sources/meta-uav \
+-  ${TOPDIR}/sources/meta-telephony \
++#  ${TOPDIR}/sources/meta-telephony \
+   ${TOPDIR}/sources/meta-beagleboard/meta-beagleboard-extras \
+ "
+ 
 @@ -60,6 +60,7 @@ BSPLAYERS ?= " \
    ${TOPDIR}/sources/meta-atmel \
    ${TOPDIR}/sources/meta-exynos \

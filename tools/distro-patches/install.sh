@@ -1,6 +1,6 @@
 #!/bin/sh
 
-OECHK=`md5sum ../../../COPYING.MIT | cut -f1 -d" "`
+OECHK=`md5sum /../../COPYING.MIT | cut -f1 -d" "`
 
 if [ $OECHK != "3da9cfbcb788c80a0384361b4de20420"  ] 
 then
