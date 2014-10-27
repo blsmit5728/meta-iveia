@@ -39,6 +39,7 @@ index ea8a6bc..45e5f6d 100644
    ${TOPDIR}/sources/meta-ros \
    ${TOPDIR}/sources/meta-uav \
 -  ${TOPDIR}/sources/meta-telephony \
++#  ${TOPDIR}/sources/meta-telephony \
    ${TOPDIR}/sources/meta-beagleboard/meta-beagleboard-extras \
  "
  
