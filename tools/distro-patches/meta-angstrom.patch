@@ -13,10 +13,10 @@ index 906fcb8..86c939a 100644
          if 'neon' in features:
 diff --git a/recipes-images/angstrom/iveia-image.bb b/recipes-images/angstrom/iveia-image.bb
 new file mode 100644
-index 0000000..d0007c2
+index 0000000..20c45b3
 --- /dev/null
 +++ b/recipes-images/angstrom/iveia-image.bb
-@@ -0,0 +1,10 @@
+@@ -0,0 +1,13 @@
 +#Angstrom bootstrap image
 +require console-base-image.bb
 +
@@ -25,5 +25,8 @@ index 0000000..d0007c2
 +
 +IMAGE_INSTALL += "packagegroup-base-extended \
 +	    "
++
++IMAGE_INSTALL += "memtester \
++		"
 +
 +export IMAGE_BASENAME = "iveia-image"
