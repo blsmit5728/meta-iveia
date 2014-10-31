@@ -31,10 +31,18 @@ index 0000000..477d863
 + # Shared-state files from other locations
 + #
 diff --git a/conf/bblayers.conf b/conf/bblayers.conf
-index ea8a6bc..2acadf6 100644
+index ea8a6bc..5af8b96 100644
 --- a/conf/bblayers.conf
 +++ b/conf/bblayers.conf
-@@ -31,7 +31,6 @@ BASELAYERS ?= " \
+@@ -22,7 +22,6 @@ BASELAYERS ?= " \
+   ${TOPDIR}/sources/meta-openembedded/meta-ruby \
+   ${TOPDIR}/sources/meta-openembedded/meta-filesystems \
+   ${TOPDIR}/sources/meta-openembedded/meta-perl \
+-  ${TOPDIR}/sources/meta-kde \
+   ${TOPDIR}/sources/meta-opie \
+   ${TOPDIR}/sources/meta-java \
+   ${TOPDIR}/sources/meta-browser \
+@@ -31,7 +30,6 @@ BASELAYERS ?= " \
    ${TOPDIR}/sources/meta-openembedded/meta-systemd \
    ${TOPDIR}/sources/meta-ros \
    ${TOPDIR}/sources/meta-uav \
@@ -42,7 +50,7 @@ index ea8a6bc..2acadf6 100644
    ${TOPDIR}/sources/meta-beagleboard/meta-beagleboard-extras \
  "
  
-@@ -60,6 +59,7 @@ BSPLAYERS ?= " \
+@@ -60,6 +58,7 @@ BSPLAYERS ?= " \
    ${TOPDIR}/sources/meta-atmel \
    ${TOPDIR}/sources/meta-exynos \
    ${TOPDIR}/sources/meta-gumstix-community \
